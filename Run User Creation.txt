@@ -1,0 +1,90 @@
+Microsoft Windows [Version 10.0.19045.2364]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\DELL>pip install django
+Requirement already satisfied: django in c:\python310\lib\site-packages (4.1.5)
+Requirement already satisfied: asgiref<4,>=3.5.2 in c:\python310\lib\site-packages (from django) (3.6.0)
+Requirement already satisfied: sqlparse>=0.2.2 in c:\python310\lib\site-packages (from django) (0.4.3)
+Requirement already satisfied: tzdata in c:\python310\lib\site-packages (from django) (2022.7)
+
+C:\Users\DELL>django-admin
+
+Type 'django-admin help <subcommand>' for help on a specific subcommand.
+
+Available subcommands:
+
+[django]
+    check
+    compilemessages
+    createcachetable
+    dbshell
+    diffsettings
+    dumpdata
+    flush
+    inspectdb
+    loaddata
+    makemessages
+    makemigrations
+    migrate
+    optimizemigration
+    runserver
+    sendtestemail
+    shell
+    showmigrations
+    sqlflush
+    sqlmigrate
+    sqlsequencereset
+    squashmigrations
+    startapp
+    startproject
+    test
+    testserver
+Note that only Django core commands are listed as settings are not properly configured (error: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.).
+
+C:\Users\DELL>cd C:\Users\DELL\Downloads\docmanv2-main
+
+C:\Users\DELL\Downloads\docmanv2-main>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified some issues:
+
+WARNINGS:
+docman.Document.permitted_users: (fields.W340) null has no effect on ManyToManyField.
+docman.Presentation.documents: (fields.W340) null has no effect on ManyToManyField.
+
+System check identified 2 issues (0 silenced).
+January 22, 2023 - 11:44:04
+Django version 4.1.5, using settings 'docmanv2.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[22/Jan/2023 11:44:52] "GET / HTTP/1.1" 302 0
+[22/Jan/2023 11:44:52] "GET /login/?next=/ HTTP/1.1" 200 5634
+[22/Jan/2023 11:44:52] "GET /static/js/jquery-1.11.0.min.js HTTP/1.1" 200 96381
+[22/Jan/2023 11:44:52] "GET /static/bootstrap/css/docs.css HTTP/1.1" 200 27874
+[22/Jan/2023 11:44:52] "GET /static/js/jquery.cookie.js HTTP/1.1" 200 3095
+[22/Jan/2023 11:44:52] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 155845
+[22/Jan/2023 11:44:52] "GET /static/jquery-upload/css/jquery.fileupload-ui.css HTTP/1.1" 200 1102
+[22/Jan/2023 11:44:52] "GET /static/jquery-upload/css/jquery.fileupload.css HTTP/1.1" 200 655
+[22/Jan/2023 11:44:52] "GET /static/js/jquery.form.min.js HTTP/1.1" 200 15248
+[22/Jan/2023 11:44:53] "GET /static/bootstrap/js/bootstrap.js HTTP/1.1" 200 148578
+[22/Jan/2023 11:44:53] "GET /static/bootstrap/js/bootstrap-multiselect.js HTTP/1.1" 200 47341
+[22/Jan/2023 11:44:53] "GET /static/moment/moment.js HTTP/1.1" 404 1807
+[22/Jan/2023 11:44:53] "GET /static/cal/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js HTTP/1.1" 404 1966
+[22/Jan/2023 11:44:53] "GET /static/img/papyrus.png HTTP/1.1" 200 10567
+Not Found: /favicon.ico
+[22/Jan/2023 11:44:54] "GET /favicon.ico HTTP/1.1" 404 4237
+
+C:\Users\DELL\Downloads\docmanv2-main>python manage.py createsuperuser
+System check identified some issues:
+
+WARNINGS:
+docman.Document.permitted_users: (fields.W340) null has no effect on ManyToManyField.
+docman.Presentation.documents: (fields.W340) null has no effect on ManyToManyField.
+Username (leave blank to use 'dell'): Olaide
+Email address: alongeolaidem@gmail.com
+Password:
+Password (again):
+Superuser created successfully.
+
+C:\Users\DELL\Downloads\docmanv2-main>
